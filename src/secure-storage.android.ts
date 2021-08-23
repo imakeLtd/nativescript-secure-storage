@@ -20,7 +20,16 @@ export class SecureStorage extends SecureStorageCommon {
 
   public get(arg: GetOptions): Promise<any> {
     return new Promise((resolve, reject) => {
-      resolve(com.orhanobut.hawk.Hawk.get(arg.key));
+      const value = com.orhanobut.hawk.Hawk.get(arg.key);
+      if (value) {
+        if(typeof value == "string" && value.length <= 80){
+          resolve(value);
+        } else {
+          resolve(JSON.parse(value));
+        }
+      } else {
+        resolve();
+      }
     });
   }
 

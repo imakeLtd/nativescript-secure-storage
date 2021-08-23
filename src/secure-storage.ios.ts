@@ -49,7 +49,11 @@ export class SecureStorage extends SecureStorageCommon {
 
       try {
         query.fetch();
-        resolve(query.password);
+        if (query.passwordObject){
+          resolve(query.passwordObject);
+        } else {
+            resolve(query.password);
+        }
       } catch (e) {
         resolve(null);
       }

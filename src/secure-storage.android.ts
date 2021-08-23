@@ -22,13 +22,13 @@ export class SecureStorage extends SecureStorageCommon {
     return new Promise((resolve, reject) => {
       const value = com.orhanobut.hawk.Hawk.get(arg.key);
       if (value) {
-        if(typeof value == "string" && value.length <= 80){
+        if (typeof value === "string" && value.length <= 80) {
           resolve(value);
         } else {
           resolve(JSON.parse(value));
         }
       } else {
-        resolve();
+        resolve(undefined);
       }
     });
   }

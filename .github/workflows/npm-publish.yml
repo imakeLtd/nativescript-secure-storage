@@ -4,6 +4,7 @@
 name: Node.js Package
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
@@ -28,8 +29,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: |
             cd src
-            npm i
-            npm run tsc
+            npm run tslint
+            npm run build
             sh ../publish/pack.sh
             npm publish ../publish/package/**.tgz
         env:

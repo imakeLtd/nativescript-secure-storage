@@ -1,5 +1,5 @@
 {
-  "name": "@nativescript/secure-storage",
+  "name": "@imakeltd/secure-storage",
   "version": "3.0.0",
   "description": "Secure Storage NativeScript plugin",
   "main": "secure-storage",

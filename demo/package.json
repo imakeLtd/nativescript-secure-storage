@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@nativescript/secure-storage": "file:../src",
+    "@imakeltd/secure-storage": "file:../src",
     "nativescript-unit-test-runner": "^0.3.0",
     "@nativescript/core": "~7.0.0"
   },

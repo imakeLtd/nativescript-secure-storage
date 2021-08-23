@@ -27,6 +27,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: |
+            cd src
             npm i
             npm run tsc
             sh ../publish/pack.sh

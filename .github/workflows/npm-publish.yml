@@ -29,9 +29,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: |
             cd src
-            npm run tslint
             npm run build
-            sh ../publish/pack.sh
-            npm publish ../publish/package/**.tgz
+            cd ../publish
+            sh /pack.sh
+            npm publish /package/**.tgz
         env:
           NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}

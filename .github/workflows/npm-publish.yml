@@ -31,7 +31,7 @@ jobs:
             cd src
             npm run build
             cd ../publish
-            sh /pack.sh
+            sh ./pack.sh
             npm publish /package/**.tgz
         env:
           NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}

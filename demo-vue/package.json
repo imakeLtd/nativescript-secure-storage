@@ -2,7 +2,7 @@
   "name": "demo-vue",
   "version": "1.0.0",
   "description": "Vue demo for the NativeScript Secure Storage plugin",
-  "author": "EddyVerbruggen <eddyverbruggen@gmail.com>",
+  "author": "imakeLtd",
   "license": "MIT",
   "dependencies": {
     "@imakeltd/secure-storage": "file:../src",
